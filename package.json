@@ -1,0 +1,25 @@
+{
+  "name": "jedi-cli",
+  "version": "0.2.2",
+  "description": "Testing command line interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Jedidiah",
+  "license": "ISC",
+  "bin": {
+    "echo": "bin/console.js",
+    "file": "bin/readFile.js"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "yargs": "^15.3.1"
+  }
+}

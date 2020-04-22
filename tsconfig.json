@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "bin/",
+        "target": "es6",
+        "module": "CommonJS"
+    },
+    "include": [
+        "src/"
+    ]
+}

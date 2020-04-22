@@ -18,9 +18,9 @@ const args = yargs.command('read <filename>', 'read the contents of a file', yar
         process.exit(1);
     }
 })
-.command('console', 'echo what was received', {}, args => {
-    console.log('Output something first');
-    console.log('Test output:' + (args[2] ?? '<nothing received>'));
+.command('console [words..]', 'echo what was received', {}, args => {
+    console.log(chalk.underline('Output something first'));
+    console.log('Test output:' + args.words);
 })
 .demandCommand(1, chalk.red('please specify a command'))
 .help()

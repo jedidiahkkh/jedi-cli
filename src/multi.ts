@@ -2,8 +2,9 @@
 
 import * as yargs from 'yargs';
 import * as fs from 'fs';
+import * as chalk from 'chalk';
 
-yargs.command('read <filename>', 'read the contents of a file', yargs => {
+const args = yargs.command('read <filename>', 'read the contents of a file', yargs => {
     yargs.positional('filename', {
         type: 'string',
         desc: 'the file to be read',
@@ -16,7 +17,13 @@ yargs.command('read <filename>', 'read the contents of a file', yargs => {
         console.log(err);
         process.exit(1);
     }
-}).command('console', 'echo what was received', {}, args => {
+})
+.command('console', 'echo what was received', {}, args => {
     console.log('Output something first');
     console.log('Test output:' + (args[2] ?? '<nothing received>'));
-});
+})
+.demandCommand(1, chalk.red('please specify a command'))
+.help()
+.argv;
+
+// console.log(args);

@@ -11,15 +11,14 @@
   ],
   "author": "Jedidiah",
   "license": "ISC",
-  "bin": {
-    "echo": "bin/console.js",
-    "file": "bin/readFile.js"
-  },
+  "bin": "bin/multi.js",
   "devDependencies": {
     "@types/node": "^13.13.1",
+    "@types/yargs": "^15.0.4",
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "yargs": "^15.3.1"
   }
 }
